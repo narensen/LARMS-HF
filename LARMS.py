@@ -28,7 +28,7 @@ def load_or_compute_embeddings(df, model):
     """
     Load or compute embeddings with timestamp-based refresh
     """
-    embeddings_file = '/home/naren/Documents/LARMS-1.2/corpus/embeddings.pt'
+    embeddings_file = 'corpus/embeddings.pt'
     
     # Add timestamp-based recomputation
     if os.path.exists(embeddings_file):
@@ -181,7 +181,7 @@ def main():
         st.write(f"- Experiment Mode: {'On' if st.session_state.experiment_mode else 'Off'}")
     
     # Load dataset
-    df = load_dataset('/home/naren/Documents/LARMS-1.2/corpus/merged_dataset.csv')  # Update with your actual path
+    df = load_dataset('corpus/merged_dataset.csv')  # Update with your actual path
     contexts = df['Context'].tolist()
     responses = df['Response'].tolist()
     
